@@ -529,6 +529,7 @@ a {
   position: relative;
   padding-block: 5em;
   margin-bottom: 10em;
+  font-size: var(--fs-400);
   /* height: 80vh; */
 }
 
@@ -680,6 +681,7 @@ a {
 @media (min-width: 60em){
   .about {
     margin: 0;
+    font-size: var(--fs-300);
   }
   .about-text {
     /* position: absolute; */
