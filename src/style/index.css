@@ -282,22 +282,40 @@ header {
   position: fixed;
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 80px;
   top: 0;
   z-index: 100;
 }
 
 nav {
+  --gap: 0;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  padding-inline: 1em;
-  /* margin: auto; */
-  justify-content: space-between;
-  align-items: center;
 }
 
+.nav-logo {
+  font-size: 1.76rem;
+}
 nav a {
   color: white;
   padding: 1em;
+  
+}
+
+.nav-list {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  background-color: hsl(var(--clr-primary-bg));
+}
+
+.nav-list.nav-active {
+  display: flex;
+}
+
+.nav-list li {
+  text-align: center;
 }
 
 .nav-list li a {
@@ -309,6 +327,72 @@ nav a {
 
 .nav-list li a:hover, nav a:hover {
   background-color: var(--clr-highlight);
+}
+
+.nav-hamburger {
+  --clr-hamburger: white;
+  position: absolute;
+    top: .75rem;
+    right: 1rem;
+    /* display: none; */
+    /* flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px; */
+  background: transparent;
+  border: 4px solid var(--clr-hamburger);
+}
+
+.nav-hamburger :is(:hover,:active) {
+  --clr-hamburger: var(--clr-highlight);
+}
+
+.hamburger {
+  --clr-bars: var(--clr-hamburger);
+}
+
+.nav-hamburger .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.nav-hamburger[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.nav-hamburger[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.nav-hamburger[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.nav-hamburger[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.nav-hamburger[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
+@media (min-width: 60em){
+  nav {
+    width: 100%;
+    padding-inline: 1em;
+    flex-direction: row;
+    /* margin: auto; */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-hamburger {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+  }
 }
 
 main {
@@ -339,7 +423,7 @@ section {
   width: 100%;
   text-align: center;
 
-  height: 100vh;
+  min-height: 100vh;
   /* scroll-snap-align: start; */
   /* scroll-snap-stop: always; */
 }
