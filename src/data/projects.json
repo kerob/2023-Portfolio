@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Weather App",
+        "link": "https://kerob-weatherdemo.netlify.app/",
+        "stack": ["HTML/CSS", "React", "OpenWeatherAPI"],
+        "img": "weatherapp.png",
+        "thumbnail": "",
+        "desc": "A Weather App made in React using the OpenWeatherAPI.",
+        "features": []
+    },
+    {
+        "title": "Wordle Clone",
+        "link": "https://kerob-wordle-clone.netlify.app/",
+        "stack": ["HTML/CSS", "React"],
+        "img": "wordleclone.png",
+        "thumbnail": "",
+        "desc": "A copy of the popular web-based word puzzle game Wordle.",
+        "features": []
+    }
+]
