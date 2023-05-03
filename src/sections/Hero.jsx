@@ -4,7 +4,8 @@ import { useInView } from "react-intersection-observer";
 export default function Hero() {
   const { ref: heroRef, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-20% 0px",
+    rootMargin: "0px",
+    threshold: 0.2,
   });
 
   return (

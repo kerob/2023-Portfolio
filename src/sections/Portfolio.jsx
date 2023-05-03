@@ -7,7 +7,8 @@ import { IoClose } from "react-icons/io5";
 function PortfolioItem({ data, openModal, passData }) {
   const { ref: itemRef, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-20% 0px",
+    rootMargin: "0px",
+    threshold: 0.2,
   });
 
   const clickHandler = () => {

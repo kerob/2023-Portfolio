@@ -12,7 +12,8 @@ import { useInView } from "react-intersection-observer";
 function About() {
   const { ref: aboutRef, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-400px 0px",
+    rootMargin: "0px",
+    threshold: 0.2,
   });
   return (
     <section ref={aboutRef} id="about" className="about">
