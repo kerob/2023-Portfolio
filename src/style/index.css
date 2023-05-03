@@ -906,7 +906,7 @@ a {
 }
 
 .contact-form {
-  padding: 2em;
+  padding: 0em;
 }
 
 .contact-form > *{
@@ -923,6 +923,10 @@ a {
 @media(min-width: 60em) {
   .contact {
     display: flex;
+  }
+
+  .contact-form {
+    padding: 2em;
   }
 
 }
