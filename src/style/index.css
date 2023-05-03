@@ -812,7 +812,7 @@ a {
   justify-items: center;
   text-align: right;
   /* height: 100vh; */
-  min-width: 60vw;
+  /* min-width: 60vw; */
   margin: auto;
   border: none;
 }
@@ -827,7 +827,9 @@ a {
 }
 
 
-
+.dialog-title {
+  font-size: 1.5rem;
+}
 /* .react-icons {
   vertical-align: middle;
 } */
@@ -853,14 +855,9 @@ a {
   /* background: hsl(182, 43%, 76%, 0.9) ; */
 }
 
-/* --clr-dark-black: hsl(0, 0%, 19%);
-  --clr-dark-black2: hsl(0, 0%, 5%);
-  --clr-dark-blue1: hsl(215, 50%, 23%);
-  --clr-dark-blue2: hsl(216, 34%, 30%);
-  --clr-highlight: hsl(170, 82%, 48%);
-  --clr-highlight2: 170 82% 48%;
-  --clr-light-blue: hsl(182, 43%, 76%);
-  --clr-neutral-blue: hsl(205, 39%, 44%); */
+.dialog-top {
+  flex-direction: column-reverse;
+}
 
 .dialog-top img{
   max-height: 300px;
@@ -876,6 +873,16 @@ a {
     /* background: hsl(182, 43%, 76%, 0.5); */
     /* background: hsl(170, 82%, 48%, 0.5); */
     backdrop-filter: blur(25px) brightness(170%);
+  }
+}
+
+@media (min-width: 60em){
+  .dialog-title {
+    font-size: var(--fs-600);
+  }
+  
+  .dialog-top {
+    flex-direction: row;
   }
 }
 

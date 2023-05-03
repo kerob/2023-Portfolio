@@ -44,10 +44,10 @@ export default function Portfolio() {
           <IoClose />
         </button>
         {displayData && (
-          <div>
+          <div className="dialog-content">
             <div className="dialog-top flex">
               <div className="dialog-top-text">
-                <h2 className="fs-600 ff-highlight fw-lite">
+                <h2 className="dialog-title ff-highlight fw-lite">
                   {displayData.title}
                 </h2>
                 <div className="center-row flex">
