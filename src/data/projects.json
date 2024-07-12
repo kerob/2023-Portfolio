@@ -1,5 +1,14 @@
 [
     {
+        "title": "Forum App",
+        "link": "https://kerob-react-reddit.netlify.app/",
+        "stack": ["HTML/CSS", "React", "firebase"],
+        "img": "reactreddit.png",
+        "thumbnail": "",
+        "desc": "A forum app made in the style of Reddit. This app uses firebase to enable user authentication and a database for threads and posts.",
+        "features": []
+    },
+    {
         "title": "Weather App",
         "link": "https://kerob-weatherdemo.netlify.app/",
         "stack": ["HTML/CSS", "React", "OpenWeatherAPI"],
