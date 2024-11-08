@@ -529,7 +529,7 @@ a {
   position: relative;
   padding-block: 5em;
   margin-bottom: 10em;
-  font-size: var(--fs-400);
+  font-size: var(--fs-600);
   /* height: 80vh; */
 }
 
@@ -552,7 +552,7 @@ a {
 
 
 .about-text {
-  position: absolute;
+  /* position: absolute; */
   padding-inline: 2em;
   /* left: 10%; */
   top: 50%;
@@ -581,6 +581,7 @@ a {
 }
 
 .about-cube-container {
+  display: none;
   /* border: 2px solid orange; */
   width: 100%;
   height: 100%;
@@ -609,6 +610,8 @@ a {
 }
 
 .cube {
+  --size: 100px;
+  --translateZVar: calc(var(--size) / 2);
   animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -620,8 +623,8 @@ a {
 
 .cube > * {
         position: absolute;
-        width: 200px;
-        height: 200px;
+        width: var(--size);
+        height: var(--size);
         border: 1px solid #ccc;
         background: rgba(167, 218, 220,0.4);
         font-size: 100px;
@@ -633,27 +636,27 @@ a {
 }
 
 .face1 {
-  transform: translateZ(100px);
+  transform: translateZ(var(--translateZVar));
 }
 
 .face2 {
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(var(--translateZVar));
 }
 
 .face3 {
-  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+  transform: rotateY(90deg) rotateX(90deg) translateZ(var(--translateZVar));
 }
 
 .face4 {
-  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(var(--translateZVar));
 }
 
 .face5 {
-  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(var(--translateZVar));
 }
 
 .face6 {
-  transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(var(--translateZVar));
 }
 
 @keyframes spincube {
@@ -684,7 +687,7 @@ a {
     font-size: var(--fs-300);
   }
   .about-text {
-    /* position: absolute; */
+    position: absolute;
     padding: 0;
     left: 10%;
     top: 50%;
@@ -699,13 +702,16 @@ a {
 
   .about-cube-container {
     /* border: 2px solid orange; */
+    display: block;
     width: 50%;
     margin-left: 0;
     right: 0;
     
   }
 
-
+  .cube {
+    --size: 200px;
+  }
 }
 
 /*Portfolio Section*/
@@ -722,7 +728,8 @@ a {
   margin-bottom: 1em;
 }
 .portfolio-grid {
-  grid-template-columns: repeat(3,1fr);
+  /* grid-template-columns: repeat(3,1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .portfolio-item {

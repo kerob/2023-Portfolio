@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react';
 import {
   FaHtml5,
   FaCss3Alt,
   FaReact,
   FaJsSquare,
   FaFigma,
-} from "react-icons/fa";
-import { IoLogoFirebase } from "react-icons/io5";
-import { useInView } from "react-intersection-observer";
+} from 'react-icons/fa';
+import { IoLogoFirebase } from 'react-icons/io5';
+import { useInView } from 'react-intersection-observer';
 
 function About() {
   const { ref: aboutRef, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "0px",
+    rootMargin: '0px',
     threshold: 0.2,
   });
   return (
     <section ref={aboutRef} id="about" className="about">
       <div className="about-container">
-        <div className={`about-text ${inView ? "animate-left" : "hidden"}`}>
+        <div className={`about-text ${inView ? 'animate-left' : 'hidden'}`}>
           <h2 className="about-title section-title txt-highlight">About Me</h2>
           <p>
             Hello! My name is Kyle and I am web developer living in the San
@@ -29,12 +29,11 @@ function About() {
             web with an emphasis on front end design.
           </p>
           <p>
-            Although I have limited experience as a developer, I have had
-            experience working in tech on the side of quality assurance. My time
-            in QA allowed me to become familiar with the flow of development as
-            well as tools I would use for the web such as HTML, Javascript, and
-            unit testing. I look forward to joining tech as a developer this
-            time.
+            With my experience as part of Quality Assurance in previous
+            companies, I bring my knowledge of thorough testing as well as a
+            solid understanding on the importance of communicating with a team
+            and delivering a complete product. I look forward to joining tech as
+            a developer this time.
           </p>
           <p>I am currently working with the following tech:</p>
           <div className="grid about-stack">
@@ -42,13 +41,15 @@ function About() {
             <span>Javascript</span>
             <span>React</span>
             <span>Firebase</span>
+            <span>Express</span>
+            <span>MongoDB</span>
             <span>Figma</span>
             <span>VSCode</span>
           </div>
         </div>
         <div
           className={`about-cube-container ${
-            inView ? "animate-right" : "hidden"
+            inView ? 'animate-right' : 'hidden'
           }`}
         >
           <div className="cube">
