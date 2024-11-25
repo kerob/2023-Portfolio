@@ -1,13 +1,13 @@
-import React, { useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import projects from "../data/projects.json";
-import { BiLinkExternal } from "react-icons/bi";
-import { IoClose } from "react-icons/io5";
+import React, { useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import projects from '../data/projects.json';
+import { BiLinkExternal } from 'react-icons/bi';
+import { IoClose } from 'react-icons/io5';
 
 function PortfolioItem({ data, openModal, passData }) {
   const { ref: itemRef, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "0px",
+    rootMargin: '0px',
     threshold: 0.2,
   });
 
@@ -19,7 +19,7 @@ function PortfolioItem({ data, openModal, passData }) {
     <div
       ref={itemRef}
       className={`portfolio-item ${
-        inView ? "portfolio-item-animate" : "hidden"
+        inView ? 'portfolio-item-animate' : 'hidden'
       }`}
       onClick={clickHandler}
     >
@@ -37,12 +37,14 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="portfolio">
       <dialog ref={dialogRef} className="portfolio-dialog">
-        <button
-          className="portfolio-close"
-          onClick={() => dialogRef.current.close()}
-        >
-          <IoClose />
-        </button>
+        <div className="portfolio-dialog-header">
+          <button
+            className="portfolio-close"
+            onClick={() => dialogRef.current.close()}
+          >
+            <IoClose />
+          </button>
+        </div>
         {displayData && (
           <div className="dialog-content">
             <div className="dialog-top flex">

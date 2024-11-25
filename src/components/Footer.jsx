@@ -1,10 +1,10 @@
-import React from "react";
-import { FaCodepen, FaGithub } from "react-icons/fa";
+import React from 'react';
+import { FaCodepen, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer>
-      <h3 className="footer__title">Kyle Robles @ 2023</h3>
+      <h3 className="footer__title">Kyle Robles @ 2024</h3>
       <ul className="social-list flex" role="list">
         <li className="social-list__item">
           <a
